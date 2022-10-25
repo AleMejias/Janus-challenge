@@ -131,7 +131,7 @@ namespace backend_productos.Models
 
             }
         }
-        public bool deleteProducto(int p_id, Producto producto)
+        public bool deleteProducto(int p_id)
         {
             bool response = false;
             string url = ConfigurationManager.ConnectionStrings["Test"].ToString();
@@ -144,7 +144,6 @@ namespace backend_productos.Models
                 Command.CommandType = CommandType.StoredProcedure;
 
                 Command.Parameters.AddWithValue("@p_id", p_id);
-                Command.Parameters.AddWithValue("@p_idTipoProducto", producto.idTipoProducto);
 
                 try
                 {
@@ -170,13 +169,3 @@ namespace backend_productos.Models
         }
     }
 }
-/*
- @p_id int,
-@p_descripcionProducto varchar(MAX),
-@p_idTipoProducto int ,
-@p_nombre varchar(MAX),
-@p_precio int,
-@p_activo bit,
-@p_campo varchar(MAX)
- 
- */

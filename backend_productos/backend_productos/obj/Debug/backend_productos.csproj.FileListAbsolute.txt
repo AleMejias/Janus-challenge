@@ -83,3 +83,6 @@ C:\Users\aleja\OneDrive\Escritorio\productos_challengue\backend_productos\backen
 C:\Users\aleja\OneDrive\Escritorio\productos_challengue\backend_productos\backend_productos\obj\Debug\backend_productos.csproj.CopyComplete
 C:\Users\aleja\OneDrive\Escritorio\productos_challengue\backend_productos\backend_productos\obj\Debug\backend_productos.dll
 C:\Users\aleja\OneDrive\Escritorio\productos_challengue\backend_productos\backend_productos\obj\Debug\backend_productos.pdb
+C:\Users\aleja\OneDrive\Escritorio\productos_challengue\backend_productos\backend_productos\bin\System.Web.Cors.dll
+C:\Users\aleja\OneDrive\Escritorio\productos_challengue\backend_productos\backend_productos\bin\System.Web.Http.Cors.dll
+C:\Users\aleja\OneDrive\Escritorio\productos_challengue\backend_productos\backend_productos\bin\System.Web.Http.Cors.xml

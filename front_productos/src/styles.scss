@@ -1,0 +1,63 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;}
+
+.wrapper{
+
+  padding: 15px 25px;
+
+  .wrapper__header {
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    padding: 10px 0px;
+    background: #2d1313;
+    border-radius: 5px;
+    .wrapper__header--img{
+      display: flex;
+      justify-content: center;
+      img {
+        width: 350px;
+      }
+    }
+
+    .wrapper__header--title{
+      display: flex;
+      justify-content: center;
+
+      h1{
+        align-self: center;
+        color: #ffffff;
+        font-family: cursive;
+        font-size: 2rem;
+      }
+    }
+
+  }
+
+  .wrapper__form{
+    margin-top: 30px;
+
+    .wrapper__form--formTag{
+      display: flex;
+      flex-direction: column;
+
+      button{
+        width: 30rem;
+      }
+    }
+  }
+}
+
+.invalid-feedback {
+  color: #e20c0c;
+  padding: 5px 15px;
+}
+
+.no-disponible {
+  color: #e20c0c;
+}

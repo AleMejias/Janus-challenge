@@ -1,0 +1,14 @@
+
+<app-header></app-header>
+
+<app-form-productos (addProductoEvent)="addProducto($event)"
+                    (updateProductoEvent)="updateProducto($event)">
+
+</app-form-productos>
+
+<app-tabla-productos *ngIf="dataList.length > 0"
+[dataList]="dataList"
+(productoSeleccionadoEvent)="OnProductoSeleccionado($event)"
+(eliminarProductoEvent)="OnEliminarProducto($event)">
+
+</app-tabla-productos>

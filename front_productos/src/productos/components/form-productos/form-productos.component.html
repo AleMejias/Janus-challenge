@@ -1,0 +1,83 @@
+<section class="wrapper__form">
+
+  <form [formGroup]="formProductos" (ngSubmit)="OnSubmit()" class="wrapper__form--formTag">
+
+    <mat-form-field class="example-full-width" appearance="fill" style="width: 30rem; margin: 10px 0;">
+      <mat-label>Nombre</mat-label>
+      <input matInput formControlName="nombre" placeholder="Nombre del producto">
+
+    </mat-form-field>
+    <div *ngIf="formControls.nombre.errors && formControls.nombre.touched" class="invalid-feedback">
+
+      <div *ngIf="formControls.nombre.errors?.['validatedLength']">
+        <strong>Debes introducir mínimo 3 caracteres.</strong>
+      </div>
+      <div *ngIf="formControls.nombre.errors?.['allowOnlyLetters']">
+        <strong>Solamente esta permitido introducir letras y números.</strong>.
+      </div>
+
+    </div>
+
+    <mat-form-field appearance="fill" style="width: 10rem;">
+      <mat-label>Cantidad</mat-label>
+      <input matInput type="number" placeholder="Máx 10" formControlName="cantidad" min="0" max="10">
+      <!--       <span matSuffix>px</span>
+        <mat-error *ngIf="fontSizeControl.invalid">Min size: 10px</mat-error> -->
+    </mat-form-field>
+      <div *ngIf="formControls.cantidad.errors && formControls.cantidad.touched" class="invalid-feedback">
+
+        <div *ngIf="formControls.cantidad.errors?.['required']">
+          <strong>Este campo es requerido.</strong>
+        </div>
+      </div>
+
+    <mat-form-field class="example-full-width" appearance="fill" style="width: 30rem; margin: 10px 0;">
+      <mat-label>Descripción</mat-label>
+      <textarea matInput formControlName="descripcion" placeholder="Descripción breve del producto"></textarea>
+    </mat-form-field>
+    <div *ngIf="formControls.descripcion.errors && formControls.descripcion.touched" class="invalid-feedback">
+
+      <div *ngIf="formControls.descripcion.errors?.['validatedLength']">
+        <strong>Debes introducir mínimo 3 caracteres.</strong>
+      </div>
+      <div *ngIf="formControls.descripcion.errors?.['validatedCharacter']">
+        Caracteres permitidos: <strong>Letras , números y caracteres especiales( / , - , _  )</strong>.
+      </div>
+
+
+    </div>
+
+    <mat-form-field appearance="fill" floatLabel="always" style="width: 15rem; margin: 10px 0;">
+      <mat-label>Precio</mat-label>
+      <input matInput type="number" formControlName="precio" placeholder="0">
+<!--       <span matPrefix>$&nbsp;</span>
+      <span matSuffix>.00</span> -->
+    </mat-form-field>
+    <div *ngIf="formControls.precio.errors && formControls.precio.touched" class="invalid-feedback">
+
+      <div *ngIf="formControls.precio.errors?.['required']">
+        <strong>Este campo es requerido.</strong>
+      </div>
+
+    </div>
+
+    <mat-form-field appearance="fill" style="width: 15rem; margin: 10px 0;">
+      <mat-label>Activo</mat-label>
+      <mat-select formControlName="activo">
+        <mat-option value="SI">Disponible para la venta</mat-option>
+        <mat-option value="NO">No disponible</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <div *ngIf="formControls.activo.errors && formControls.activo.touched" class="invalid-feedback">
+
+      <div *ngIf="formControls.activo.errors?.['required']">
+        <strong>Este campo es requerido.</strong>
+      </div>
+
+    </div>
+
+    <button mat-raised-button color="primary" type="submit"[disabled]="formProductos.status === 'INVALID'" >Agregar</button>
+
+  </form>
+
+</section>
